@@ -114,6 +114,11 @@ const VoiceRSS = {
 
 // test();
 
+// Passing Joke to VoiceRSS API
+function tellMe(joke) {
+	console.log('tellme:', joke);
+}
+
 // Get jokes from Joke API
 async function getJokes() {
 	let joke = '';
@@ -127,7 +132,7 @@ async function getJokes() {
 		} else {
 			joke = data.joke;
 		}
-		console.log(joke);
+		tellMe(joke);
 	} catch (error) {
 		// Catch Error Here
 		console.log('whoops', error);
